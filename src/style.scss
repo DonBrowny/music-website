@@ -11,6 +11,9 @@ body{
     color: $color-neutral-100;
     font-family: 'Rubik', sans-serif;
 }
+*{
+    box-sizing: border-box;
+}
 
 .header {
     display: flex;
@@ -170,9 +173,31 @@ body{
 
     .contact {
         position: absolute;
+        display: flex;
+        justify-content: space-around;
         bottom: 0px;
         width: 100%;
         height: 72px;
         background-color: $color-neutral-500;
+
+        &__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin:0px auto;
+            width: 33%;
+            border: 2px solid $color-secondary-500;
+
+            &:nth-child(2){
+                border-left: none;
+                border-right: none;
+                width: 34%;
+            }
+
+            & img{
+                width: 50px;
+            }
+        }
     }
 }
