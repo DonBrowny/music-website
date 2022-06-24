@@ -11,4 +11,15 @@ function onHamburgerClick(element) {
     } else {
       body.style.overflow = "auto";
     }
+}
+
+var prevScrollPos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollPos > currentScrollPos) {
+    document.getElementsByTagName("header")[0].style.top = "0";
+  } else {
+    document.getElementsByTagName("header")[0].style.top = "-72px";
   }
+  prevScrollPos = currentScrollPos;
+}
